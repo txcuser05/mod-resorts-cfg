@@ -1,0 +1,21 @@
+#
+# Configuration for staging environment
+#
+version: 1.0
+app:
+  endpoints: public
+
+  # build id to deploy. if 'version' is commented out, the application is not deployed
+  version: ""
+
+  # number of instances
+  instances:
+    # min number of instances. min value 1, default value 1.
+    min: 1
+    
+    # max number of instances. defaults to min.
+    max: 3
+    
+  resources:
+    # max cpu. memory limit is based on cpu value at 1:4 memory ratio, e.g. 1 cpu == 4 gb
+    cpu: 1
